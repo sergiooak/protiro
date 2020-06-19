@@ -9,7 +9,7 @@
     "serve": "nuxt serve",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt build && nuxt export"
+    "generate": "nuxt build && nuxt export && cd functions/teste && yarn"
   },
   "dependencies": {
     "nuxt": "2.13.0",
