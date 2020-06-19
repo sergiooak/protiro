@@ -1,7 +1,9 @@
 <template>
-  <div class="flex min-h-screen flex-col">
+  <div class="flex min-h-screen flex-col overflow-x-hidden">
     <Header />
-    <nuxt class="flex-1" />
+    <transition name="fade">
+      <nuxt class="flex-1" />
+    </transition>
     <Footer />
   </div>
 </template>
@@ -20,6 +22,13 @@
 
 <style>
   body{
-    @apply bg-gray-900;
+    @apply bg-black;
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
   }
 </style>
